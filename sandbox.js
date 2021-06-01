@@ -1,28 +1,25 @@
-let diceImages = new Array (
-    "images/dice1.png",
-    "images/dice2.png",
-    "images/dice3.png",
-    "images/dice4.png",
-    "images/dice5.png",
-    "images/dice6.png",
-)
+function rollDice1() {
+    let randomNumber1 = Math.floor((Math.random() * 6) + 1)
+    document.getElementById('img1').src = "images/dice" + randomNumber1 + ".png";
+    return randomNumber1
+}
 
-let randomDiceImage1 = Math.floor(Math.random() * diceImages.length)
+function rollDice2() {
+    let randomNumber2 = Math.floor((Math.random() * 6) + 1)
+    document.getElementById('img2').src = "images/dice" + randomNumber2 + ".png"
+    return randomNumber2
+}
 
-let image1 = document.querySelectorAll("img")[0];
-
-image1.setAttribute("src", randomDiceImage1);
-
-let randomDiceImage2 = Math.floor(Math.random() * diceImages.length)
-
-let image2 = document.querySelectorAll("img")[1];
-
-image2.setAttribute("src", randomDiceImage2);
-
-if(image1 > image2) {
-    document.querySelector('h1').innerHTML = "Player 1 Won!";
-}else if(image1 < image2) {
-    document.querySelector('h1').innerHTML = "Player 2 Won!";
-}else{
-    document.querySelector('h1').innerHTML = "It's a Draw!"
+function whoWon(dice1, dice2) {
+    dice1 = rollDice1();
+    dice2 = rollDice2();
+    if(dice1 > dice2) {
+        document.querySelector('h1').innerHTML = "Player 1 Won!";
+    }else if(dice1 < dice2) {
+        document.querySelector('h1').innerHTML = "Player 2 Won!";
+    }else if(dice1 == dice2){
+        document.querySelector('h1').innerHTML = "It's a Draw!"
     }
+    console.log("function fired", dice1, dice2)
+}
+
