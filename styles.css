@@ -27,7 +27,7 @@ div.button{
   box-sizing: :content-box;
   border: none;
   text-decoration:none;
-  font-family: 'Lobster', cursive;
+  font-family: 'Permanent Marker', cursive;
   font-weight:500;
   font-size: 32px;
   color: white;
@@ -40,20 +40,20 @@ div.button{
   }
 
 body {
-  background-color: #393E46;
+  background-color: #F39237;
 }
 
 h1 {
   margin: 30px;
-  font-family: 'Lobster', cursive;
+  font-family: 'Permanent Marker', cursive;
   text-shadow: 5px 0 #232931;
   font-size: 8rem;
-  color: #4ECCA3;
+  color: white;
 }
 
 p {
   font-size: 2rem;
-  color: #4ECCA3;
+  color: white;
   font-family: 'Indie Flower', cursive;
 }
 
